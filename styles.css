@@ -153,8 +153,8 @@ button:hover {
 }
 
 @keyframes rainbowBorder {
-  0% { background: linear-gradient(45deg,red, orange, yellow, green, blue, indigo, violet); }
-  100% { background: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red); }
+  0% { background: linear-gradient(45deg,red, orange, green, blue, indigo, violet); }
+  100% { background: linear-gradient(45deg, violet, indigo, blue, green, orange, red); }
 }
 
 @media (min-width: 768px) {

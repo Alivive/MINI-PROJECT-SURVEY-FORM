@@ -1,110 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="School Languages Survey Form">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="School Languages Survey Form">
   <title>Survey Form</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico">
+  <style>
+    /* Make sure the background fills the screen */
+    #vanta-bg {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1; /* keeps background behind content */
+    }
+  </style>
 </head>
 
 <body>
-  <div class="form"></div>
-  <h1 class="title">SCHOOL LANGUAGE SURVEY</h1>
+  <!-- Vanta background container -->
+  <div id="vanta-bg"></div>
+
+  <div class="form">
+    <h1 class="title">SCHOOL LANGUAGE SURVEY</h1>
+    <p id="description">Below is a Form, kindly fill it appropriately.</p>
+    
+    <form id="survey-form">
+      <h1 class="title">PERSONAL DETAILS</h1>
+      
+      <label id="name-label" for="name">First Name</label><br>
+      <input id="name" type="text" name="name" placeholder="Johnstone Kamau" required><br><br>
+      
+      <label for="Middle">Middle and Last Name</label><br>
+      <input id="Middle" type="text" required placeholder="Kamau Gitonga"><br><br>
+      
+      <label for="class">Class/Stream</label><br>
+      <input id="class" type="text" required placeholder="2A"><br><br>
+      
+      <label id="email-label" for="email">Email</label><br>
+      <input id="email" type="email" required placeholder="example@gmail.com"><br><br>
+      
+      <label for="number">Your Age</label><br>
+      <input id="number" type="number" required min="10" max="30" placeholder="10"><br><br>
+      
+      <label for="Gender">Gender</label><br>
+      <select id="list">
+        <option value="Male" selected>Male</option>
+        <option value="Female">Female</option>
+        <option value="Prefer not to say">Prefer not to say</option>
+      </select><br><br>
+      
+      <h2 class="title">LANGUAGES-INTEL</h2>
+      <label for="dropdown">Choose your preferred language of greatest proficiency</label><br>
+      <select id="dropdown">
+        <option value="German" selected>German</option>
+        <option value="Chinese">Chinese</option>
+        <option value="French">French</option>
+        <option value="Spanish">Spanish</option>
+        <option value="National Languages">National Languages</option>
+      </select><br><br>
+      
+      <h2 class="title">SELECTABLES - Choose only one option in each</h2>
+      <h3>Why learn the language?</h3>
+      <div class="radio-group">
+        <input type="radio" id="fun" name="reason" value="fun">
+        <label for="fun">Pure Fun and Adventure</label><br>
+        
+        <input type="radio" id="professional" name="reason" value="professional">
+        <label for="professional">Professional Requirement</label><br>
+        
+        <input type="radio" id="culture" name="reason" value="culture">
+        <label for="culture">Sensational Culture</label><br>
+        
+        <input type="radio" id="challenge" name="reason" value="challenge">
+        <label for="challenge">Taking on a new challenge</label>
+      </div><br>
+      
+      <h3>What is your language proficiency level as of date?</h3>
+      <div class="checkbox-group">
+        <input type="checkbox" id="beginner" name="level" value="beginner">
+        <label for="beginner">BEGINNER (A1-A2)</label><br>
+        
+        <input type="checkbox" id="intermediate" name="level" value="intermediate">
+        <label for="intermediate">INTERMEDIATE (B1-B2)</label><br>
+        
+        <input type="checkbox" id="advanced" name="level" value="advanced">
+        <label for="advanced">ADVANCED (C1-C2)</label>
+      </div><br>
+      
+      <label for="additions">Any more to share... Please go ahead.</label><br>
+      <textarea id="additions" name="additions" placeholder="Add your comments here"></textarea><br><br>
+      
+      <button id="submit" type="submit">SUBMISSION</button>
+    </form>
   </div>
-  <p id="description">Below is a Form,kindly fill it appropriately.</p>
-  
-  <form id="survey-form">
-    <h1 class="title">PERSONAL DETAILS </h1>
-    <label id="name-label" for="name">First Name</label>
-      <br>
-    <input id="name" type="text" name="name" placeholder="Johnstone Kamau" required>
-     <br>
-    <br>
-    <label for="">Middle and Last Name</label>
-    <br>
-    <input id="Middle" type="text" required placeholder="Kamau Gitonga">
-    <br>
-    <br>
-    <label for="class">Class/Stream</label>
-    <br>
-    <input id="class" type="text" required placeholder="2A">
-    <br>
-    <br>
-    <label id="email-label" for="email">Email</label>
-    <br>
-    <input id="email" type="email" required placeholder="example@gmail.com">
-    <br>
-    <br>
-    <label for="number">Your Age</label>
-    <br>
-    <input id="number" type="number" required min="10" max="30" placeholder="10">
-    <br>
-    <br>
-    <label for="Gender">Gender</label>
-    <br>
-    <select id="list">
-      <option value="Male" selected>Male</option>
-      <option value="Female" selected>Female</option>
-      <option value="Prefer not to say" selected>Prefer not to say</option>
-    </select>
-  
-    <br>
-     <br>
-    <h2 class="title">LANGUAGES-INTEL</h2>
-    <label for="dropdown">Choose your preffered language of greatest proficiency</label>
-    <br>
-    <select id="dropdown">
-      <option value="German" selected>German</option>
-      <option value="Chinese" selected>Chinese</option>
-      <option value="French" selected>French</option>
-      <option value="Spanish" selected>Spanish</option>
-      <option value="National Languages" selected>National Languages</option>
-    </select>
-    <br>
-    <br>
-    <h2 class="title">SELECTABLES-Choose only one option in each</h2>
-    <div class="radio-group"></div>
-    <h3>Why learn the language???</h3>
-    <br>
-    <div class="radio-group">
-            
-            <input type="radio" id="very-satisfied" name="satisfaction" value="very-satisfied">
-            <label for="very-satisfied">Pure Fun and Adventure</label><br>
-            <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
-            <label for="satisfied">Professional Requirement</label><br>
-            <input type="radio" id="neutral" name="satisfaction" value="neutral">
-            <label for="neutral">Sensational Culture</label><br>
-            <input type="radio" id="dissatisfied" name="satisfaction" value="dissatisfied">
-            <label for="dissatisfied">Taking on a new challenge</label>
 
-    </div>
-
-    <br>
-    <br>
-     <div class="checkbox-group">
-    <h3>What is your language proficiency level as of date??</h3>
-    <input type="checkbox" name="recommend" value="yes">
-    <label>BEGINNER(A1-A2)</label>
-    <br>
-    <input type="checkbox" name="recommend" value="yes">
-    <label>INTERMEDIATE(B1-B2)</label>
-    <br>
-    <input type="checkbox" name="recommend" value="yes">
-    <label>ADVANCED(C1-C2)</label>
-    <br>
-    <br>
-
-     </div>
-
-     <label for="additions">Any more to share...Please go ahead.</label>
-     <textarea id="additions" name="additions" placeholder="Add your comments here"></textarea>
-
-     <button id="submit" type="submit">SUBMISSION</button>
-  </form>
- 
+  <!-- Scripts at bottom -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+  <script>
+    VANTA.WAVES({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00
+    })
+  </script>
 </body>
-
 </html>
